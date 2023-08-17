@@ -51,7 +51,13 @@ When the training dataset is ready:
 2. train your model, while successively adding annotations (via Labkit, see above) if a higher performance is expected. 
 
 ## 3. Usage: FACT Tracking
-
-After starting image acquirement and segmentation, set up the folder path for raw image and segmentation. Use main.m from FACT_Tracking for real-time cell tracking. The real-time cell tracking is shown in the following figure.
+'FACT_Tracking' is a complete package ready to run. It is scripted in Matlab. **We will upload a Python version in the near future**. In this package: 
+1. 'FACT_Tracking/Data/Raw' contains all raw images.
+2. 'FACT_Tracking/Data/GTWeka' contains all cell masks.
+3. 'FACT_Tracking/Data/Input' contains input images for tracking, where Input = Raw .* GTWeka.
+4. 'set_paths.m' let you edit folder paths of raw images, input images etc. It sets also default parameters such as gap-closing-distance, gap-closing-window, etc. 
+5. 'main.m' is the function to run tracking.
+6. The rest matlab files are helper functions, most of the time, you do not need to edit them.
+7. The tracking outcome will be saved as XML files. One can visualize tracks using Fiji and [Mamut](https://imagej.net/plugins/mamut/) Plugin. 
 
 ## 4. Tracking Visualization
