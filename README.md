@@ -46,9 +46,12 @@ We suggest annotation with Labkit:
 
 
 ### Training
-When the training dataset is ready, load train.ipynb from 'FACT_segmentation', and set up the path of the training dataset folder. Then, the user can start to train their own model. The workflow of training is shown in the figure.
+When the training dataset is ready:
+1. load train.ipynb from 'FACT_segmentation', and set up the path of the training dataset folder.
+2. train your model, while successively adding annotations (via Labkit, see above) if a higher performance is expected. 
 
-## 3 Usage: FACT Tracking
+## 3. Usage: FACT Tracking
+
 After starting image acquirement and segmentation, set up the folder path for raw image and segmentation. Use main.m from FACT_Tracking for real-time cell tracking. The real-time cell tracking is shown in the following figure.
 
-![](https://github.com/ChienMPLab/ChienMPLab_FACT/blob/main/images/Tracking.png)
+## 4. Tracking Visualization
