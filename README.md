@@ -1,16 +1,30 @@
-# FACT - Fast-and-Accurate Cell Tracking: a real-time cell segmentation and tracking algorithm to instantly export cellular characteristics from big image data
+# FACT: a real-time cell segmentation and tracking algorithm to instantly export cellular characteristics from big image data
 
-This repository contains the FACT segmentation and FACT tracking, an algorithm for real-time live-cell image segmentation and tracking, as described in the papers: 
+This repository contains the source codes for FACT segmentation and tracking, a real-time pipeline to instantly analyze large-scale of imaging data. Details can be found in:
 
 Ting-Chun Chou*, Li You*, Cecile Beerens, Kate J. Feller, Jelle Storteboom, Miao-Ping Chien.
 Fast-and-Accurate Cell Tracking (FACT): a real-time cell segmentation and tracking algorithm to instantly export cellular characteristics from big image data (*authors contributed equally)
 
+Information on publication will be updated on time. 
+
+## 1. Overview
+Instant analysis of large imaging data is the advantage of using FACT: Once an image (e.g., ~10,000 cells) is generated, it is segmented (<5 secs) and tracked (< 1 min) right after. Quantification of cellular characteristics (such as cell movement, and lineage over 24 hrs) can be obtained soon after image acquisition. FACT consists of two interactive parts: GTWeka segmentation and tracking. 
+
+FACT segmentation is called _GTWeka_: it is built based on [_Trainable Weka_](https://github.com/fiji/Trainable_Segmentation) or [_Illastik_](https://github.com/ilastik/ilastik) with ground-truth annotation as a 'golden standard' to optimize the Weka model (i.e., a random forest) to select necessary image features for the best segmentation (measured by IoU values). An optimized random forest is referred to as a GTWeka model, which can be used as a pre-trained cell segmentation model. 
+![image](https://github.com/ChienMPLab/ChienMPLab_FACT/assets/42544588/57c4fb06-a666-446f-96cc-b0b2cbf77ab0)
+
+We release our pre-trained GTWeka in this repository (see below 'use-pretrained-GTWeka'). For the dataset that requires a different GTWeka model, we guide you on how to train your GTWeka (see below 'train-your-GTWeka'). 
+
+FACT tracking combines [_Graussian Mixture Model Tracking_](https://sourceforge.net/projects/funseq/) with real-time cell track correction. It helps to reduce contamination caused by cell overlap. We release FACT tracking  
+
+## 2 Usage: FACT Segmentation - GTWeka
+## 3 Usage: FACT Tracking
 
 
 
 
-## Workflow
-### Prepare the training data for segmentation
+
+Using GTWeka is similar to the usage of Trainable Weka or Illastik
 Prepare the training dataset to train your own model. See the steps shown in the figure below.
 
 ![](https://github.com/ChienMPLab/ChienMPLab_FACT/blob/main/images/PrepareTrainingDataset.png)
