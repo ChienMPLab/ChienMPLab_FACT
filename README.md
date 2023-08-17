@@ -2,8 +2,8 @@
 
 This repository contains the FACT segmentation and FACT tracking, an algorithm for real-time live-cell image segmentation and tracking, as described in the papers: 
 
-Ting-Chun Chou, Li You, Cecile Beerens, Kate J. Feller, Jelle Storteboom, Miao-Ping Chien.
-Fast-and-Accurate Cell Tracking (FACT): a real-time cell segmentation and tracking algorithm to instantly export cellular characteristics from big image data
+Ting-Chun Chou*, Li You*, Cecile Beerens, Kate J. Feller, Jelle Storteboom, Miao-Ping Chien.
+Fast-and-Accurate Cell Tracking (FACT): a real-time cell segmentation and tracking algorithm to instantly export cellular characteristics from big image data (*authours contributed equally)
 
 
 
